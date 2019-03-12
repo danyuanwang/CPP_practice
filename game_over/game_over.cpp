@@ -4,6 +4,7 @@
 #include <iostream>
 using namespace std;
 void miner_puzzle();
+void calculate_water_amount();
 int main()
 {
 	/*int score;
@@ -61,7 +62,8 @@ int main()
 		}
 		cout << endl;
 	}*/
-	miner_puzzle();
+	//miner_puzzle();
+	calculate_water_amount();
 	
 	return 0;
 }
