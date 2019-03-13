@@ -5,6 +5,7 @@
 using namespace std;
 void miner_puzzle();
 void calculate_water_amount();
+void calling_best_gift();
 int main()
 {
 	/*int score;
@@ -63,7 +64,8 @@ int main()
 		cout << endl;
 	}*/
 	//miner_puzzle();
-	calculate_water_amount();
+	//calculate_water_amount();
+	calling_best_gift();
 	
 	return 0;
 }
