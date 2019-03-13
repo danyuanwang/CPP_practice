@@ -26,5 +26,11 @@
     <ClCompile Include="treasure_hunt.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="best_gift.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="water_levels.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
