@@ -151,12 +151,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="link_list.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="best_gift.cpp" />
     <ClCompile Include="common_tools.cpp" />
     <ClCompile Include="game_over.cpp" />
+    <ClCompile Include="link_list.cpp" />
+    <ClCompile Include="link_list_runner.cpp" />
     <ClCompile Include="pointer_and_reference.cpp" />
     <ClCompile Include="treasure_hunt.cpp" />
     <ClCompile Include="water_levels.cpp" />
