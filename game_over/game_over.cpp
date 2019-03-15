@@ -6,6 +6,7 @@ using namespace std;
 void miner_puzzle();
 void calculate_water_amount();
 void calling_best_gift();
+void pointer_reference_call();
 int main()
 {
 	/*int score;
@@ -65,7 +66,8 @@ int main()
 	}*/
 	//miner_puzzle();
 	//calculate_water_amount();
-	calling_best_gift();
+	//calling_best_gift();
+	pointer_reference_call();
 	
 	return 0;
 }
