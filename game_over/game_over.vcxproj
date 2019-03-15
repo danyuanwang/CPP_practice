@@ -155,7 +155,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="best_gift.cpp" />
+    <ClCompile Include="common_tools.cpp" />
     <ClCompile Include="game_over.cpp" />
+    <ClCompile Include="pointer_and_reference.cpp" />
     <ClCompile Include="treasure_hunt.cpp" />
     <ClCompile Include="water_levels.cpp" />
   </ItemGroup>
