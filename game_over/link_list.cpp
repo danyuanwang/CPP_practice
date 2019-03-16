@@ -10,6 +10,7 @@ link_list::link_list() :
 
 link_list::~link_list()
 {
+	destroy_link();
 }
 
 void link_list::create_link(int a[], int size) {
@@ -60,6 +61,24 @@ void link_list::append_value(int x)
 	{
 		q->pnext = p;
 	}
+}
+
+void link_list::reverse_list() {
+	link_node_ptr p = m_header_ptr;
+	link_node_ptr q = p ->pnext;
+	link_node_ptr s = q->pnext;
+	p->pnext = nullptr;
+	while(q != nullptr && q->pnext != nullptr)
+	{
+		
+		q->pnext = p;
+		p = q;
+		q = s;
+		s = s->pnext;
+	}
+	q->pnext = p;
+	m_header_ptr = q;
+
 }
 
 void link_list::print_link() {
