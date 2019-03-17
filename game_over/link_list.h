@@ -11,7 +11,8 @@ class link_list
 public:
 	link_list();
 	~link_list();
-	void create_link(int a[], int size);
+	void create_link(int *p1, int size);
+	void create_link(const char *s);
 	void print_link();
 	void partition(int x);
 	void prepend_value(int x);

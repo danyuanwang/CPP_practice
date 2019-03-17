@@ -2,11 +2,13 @@
 void link_list_runner() {
 	int a[] = { 1,2,3,4,5,6,7,8,9};
 	int b[] = { 1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9 };
+	const char *str = " a brown fox jumps over the fence";
 	link_list llist;
-	llist.create_link(a, sizeof(a) / sizeof(int));
+	llist.create_link(str);
+	//llist.create_link(a, sizeof(a) / sizeof(int));
 	llist.print_link();
 	//llist.reverse_list();
-	llist.swap_2_nodes();
+	//llist.swap_2_nodes();
 	llist.print_link();
 	/* llist.partition(5);
 	llist.print_link();

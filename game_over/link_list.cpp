@@ -13,17 +13,40 @@ link_list::~link_list()
 	destroy_link();
 }
 
-void link_list::create_link(int a[], int size) {
+void link_list::create_link(int *p1, int size) {
 	destroy_link();
 
 	for (int i = size - 1; i >= 0; i--) {
 		link_node_ptr p = new link_node;
-		p->value = a[i];
+		p->value = p1[i];
 		p->pnext = m_header_ptr;
 		m_header_ptr = p;
 	}
 }
+void link_list::create_link(const char *str) {
+	destroy_link();
 
+	const char *tp = str;
+	link_node_ptr t = m_header_ptr;
+	
+	//for (int i = 0; str[i] != 0; i++)
+	while (*tp++ != 0)
+	{
+		link_node_ptr n = new link_node;
+		n->value = *tp;
+		n->pnext = nullptr;
+		if (t == nullptr) {
+			m_header_ptr = n;
+			t = n;
+		}
+		else {
+			
+			t->pnext = n;
+			t = n;
+		}
+		
+	}
+}
 void link_list::destroy_link() {
 	link_node_ptr p = m_header_ptr;
 	while (p != nullptr)
