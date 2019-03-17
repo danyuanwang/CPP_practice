@@ -21,6 +21,9 @@
     <ClInclude Include="link_list.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="link_list_iterator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="game_over.cpp">
@@ -45,6 +48,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="link_list_runner.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="link_list_iterator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

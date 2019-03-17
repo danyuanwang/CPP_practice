@@ -1,8 +1,5 @@
 #pragma once
-typedef struct link_node {
-	int value;
-	link_node * pnext;
-}*link_node_ptr;
+#include "link_list_iterator.h"
 
 class link_list
 {
@@ -19,6 +16,8 @@ public:
 	void append_value(int x);
 	void reverse_list();
 	void swap_2_nodes();
+
+	link_list_iterator get_iterator();
 private:
 	link_node_ptr m_header_ptr;
 	void destroy_link();

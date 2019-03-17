@@ -202,3 +202,8 @@ link_list* sum_list(link_list* plist1, link_list* plist2)
 	}
 	return rl;
 }
+
+link_list_iterator link_list::get_iterator()
+{
+	return link_list_iterator();
+}

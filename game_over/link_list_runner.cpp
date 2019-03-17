@@ -1,3 +1,4 @@
+#include<iostream>
 #include"link_list.h"
 void link_list_runner() {
 	int a[] = { 1,2,3,4,5,6,7,8,9};
@@ -10,6 +11,11 @@ void link_list_runner() {
 	//llist.reverse_list();
 	//llist.swap_2_nodes();
 	llist.print_link();
+	for (link_list_iterator itor = llist.get_iterator(); itor.has_next(); itor.step_next())
+	{
+		std::cout << itor.get_value() << " ";
+	}
+
 	/* llist.partition(5);
 	llist.print_link();
 
