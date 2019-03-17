@@ -17,6 +17,7 @@ public:
 	void prepend_value(int x);
 	void append_value(int x);
 	void reverse_list();
+	void swap_2_nodes();
 private:
 	link_node_ptr m_header_ptr;
 	void destroy_link();

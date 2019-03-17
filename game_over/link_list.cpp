@@ -81,6 +81,35 @@ void link_list::reverse_list() {
 
 }
 
+void link_list::swap_2_nodes() {
+	link_node_ptr p = m_header_ptr;
+	link_node_ptr h = p->pnext;
+	link_node_ptr q = p->pnext;
+	link_node_ptr s = q->pnext;
+	link_node_ptr u = q->pnext;
+
+	while (q != nullptr && q->pnext != nullptr && u->pnext != nullptr)
+	{
+		q->pnext = p;
+		q = p;
+		s = s->pnext;
+		p = s;
+		q->pnext = p;
+		s = u;
+		p = s;
+		
+		q = p->pnext;
+		s = q->pnext;
+		u = q->pnext;
+	}
+
+	q->pnext = p;
+	p->pnext = u;
+	m_header_ptr = h;
+
+
+}
+
 void link_list::print_link() {
 	link_node_ptr p = m_header_ptr;
 	while (p != nullptr)
