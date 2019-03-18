@@ -1,16 +1,19 @@
 #include <iostream>
 #include <vector>
+#include <memory>
 #include"link_list.h"
 using namespace std;
 
 link_list::link_list() :
 	m_header_ptr(nullptr)
 {
+	cout << "link list constructor executed";
 }
 
 link_list::~link_list()
 {
 	destroy_link();
+	cout << "link list constructor destroyed";
 }
 
 void link_list::create_link(int *p1, int size) {
@@ -203,7 +206,8 @@ link_list* sum_list(link_list* plist1, link_list* plist2)
 	return rl;
 }
 
-link_list_iterator link_list::get_iterator()
+unique_ptr<link_list_iterator> link_list::get_iterator()
 {
-	return link_list_iterator();
+	unique_ptr<link_list_iterator> pIter{ new link_list_iterator(m_header_ptr) };
+	return pIter;
 }

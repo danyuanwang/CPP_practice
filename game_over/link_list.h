@@ -1,6 +1,6 @@
 #pragma once
 #include "link_list_iterator.h"
-
+#include <memory>
 class link_list
 {
 	friend link_list* sum_list(link_list* plist1, link_list* plist2);
@@ -17,7 +17,7 @@ public:
 	void reverse_list();
 	void swap_2_nodes();
 
-	link_list_iterator get_iterator();
+	std::unique_ptr<link_list_iterator> get_iterator();
 private:
 	link_node_ptr m_header_ptr;
 	void destroy_link();

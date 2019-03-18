@@ -1,5 +1,6 @@
 #include<iostream>
 #include"link_list.h"
+#include<memory>
 void link_list_runner() {
 	int a[] = { 1,2,3,4,5,6,7,8,9};
 	int b[] = { 1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9 };
@@ -7,13 +8,15 @@ void link_list_runner() {
 	link_list llist;
 	llist.create_link(str);
 	//llist.create_link(a, sizeof(a) / sizeof(int));
-	llist.print_link();
+	//llist.print_link();
 	//llist.reverse_list();
 	//llist.swap_2_nodes();
-	llist.print_link();
-	for (link_list_iterator itor = llist.get_iterator(); itor.has_next(); itor.step_next())
+	//llist.print_link();
+	std::unique_ptr<link_list_iterator> pitor = llist.get_iterator();
+	for ( ;pitor->has_next(); pitor->step_next())
 	{
-		std::cout << itor.get_value() << " ";
+		std::cout << pitor->get_value() << " ";
+
 	}
 
 	/* llist.partition(5);
